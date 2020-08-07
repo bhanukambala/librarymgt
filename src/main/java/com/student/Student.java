@@ -24,11 +24,12 @@ public class Student {
 	}
 	@Override
 	public int hashCode() {
-		return age;
+		int hash=rollno.hashCode();
+		return hash;
 	}
 	@Override
 	public boolean equals(Object arg) {
-		if(this==arg) {
+		if(arg==this) {
 			return true;
 		}
 		
@@ -37,7 +38,7 @@ public class Student {
 	   }
 		
 	    Student that=(Student)arg;	
-		boolean isequal=this.age==that.age;
-		return isequal;
+		boolean equalResult=this.rollno.equals(that.rollno);
+		return equalResult;
 	}
 }
